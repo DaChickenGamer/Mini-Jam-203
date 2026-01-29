@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8842452138974202625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MiniJam203_FMOD/Build/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD/MiniJam203_FMOD/Build/Desktop/Master.strings.bank
+  Name: MiniJam203_FMOD/Build/Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639052142458357048
+  FileSizes:
+  - Name: 
+    Value: 868
+  Exists: 1
+--- !u!114 &-6716809864709030607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Test Events/One-Shot
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Test Events/One-Shot
+  Guid:
+    Data1: 1893251572
+    Data2: 1252586997
+    Data3: 291419299
+    Data4: 1864052146
+  Banks:
+  - {fileID: 8703054968785227415}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 296
+--- !u!114 &-2383410937528759602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Test Events/Loop
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Test Events/Loop
+  Guid:
+    Data1: 1972963668
+    Data2: 1333405625
+    Data3: 263190186
+    Data4: 1813086877
+  Banks:
+  - {fileID: 8703054968785227415}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1200
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
+  EditorBanks:
+  - {fileID: -8842452138974202625}
+  - {fileID: 3741858893669387556}
+  - {fileID: 8703054968785227415}
+  EditorEvents:
+  - {fileID: -2383410937528759602}
+  - {fileID: -6716809864709030607}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 3741858893669387556}
+  StringsBanks:
+  - {fileID: -8842452138974202625}
+  cacheTime: 639052143607877494
+  cacheVersion: 131635
+--- !u!114 &3741858893669387556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MiniJam203_FMOD/Build/Desktop/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD/MiniJam203_FMOD/Build/Desktop/Master.bank
+  Name: MiniJam203_FMOD/Build/Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 639052142458332044
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8703054968785227415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MiniJam203_FMOD/Build/Desktop/Test Bank.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD/MiniJam203_FMOD/Build/Desktop/Test Bank.bank
+  Name: MiniJam203_FMOD/Build/Desktop/Test Bank
+  StudioPath: bank:/Test Bank
+  lastModified: 639052143607877494
+  FileSizes: []
+  Exists: 1

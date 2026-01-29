@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6437909a-19aa-4e7b-a77f-56bb363367b9}">
+		<property name="assetPath">
+			<value>UI_Fader.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.43637188208616778</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{081db503-a2d4-4c6a-bf88-e9209451f200}</destination>
+		</relationship>
+	</object>
+</objects>

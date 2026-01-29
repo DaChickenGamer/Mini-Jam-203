@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{030c710a-97e9-462f-86ef-3fbc3c02eedc}">
+		<property name="assetPath">
+			<value>PinkNoise.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.2</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{081db503-a2d4-4c6a-bf88-e9209451f200}</destination>
+		</relationship>
+	</object>
+</objects>
