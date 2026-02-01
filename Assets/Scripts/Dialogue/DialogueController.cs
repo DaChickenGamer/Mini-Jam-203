@@ -1,5 +1,7 @@
 using System.Collections;
 using DG.Tweening;
+using FMOD.Studio;
+using FMODUnity;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -14,8 +16,6 @@ public class DialogueController : MonoBehaviour
     private bool dialogueActive;
     
     private bool doingTextAnimation;
-    private int currentResetCount = 0;
-    private int countToReset = 2;
 
     private DialogueSequence current;
     private int index;
@@ -33,7 +33,8 @@ public class DialogueController : MonoBehaviour
 
     private float currentTypeSpeed;
     
-    private Coroutine typingCoroutine;
+    EventInstance currentEvent;
+    
 
     public void Play(DialogueSequence sequence)
     {
@@ -56,8 +57,6 @@ public class DialogueController : MonoBehaviour
 
         dialogueText.gameObject.SetActive(true);
 
-        dialogueText.gameObject.SetActive(true);
-
         dialogueText.DOKill();
         dialogueText.alpha = 0f;
 
@@ -65,17 +64,20 @@ public class DialogueController : MonoBehaviour
             .SetEase(Ease.OutCubic)
             .OnComplete(() =>
             {
-                typingCoroutine = StartCoroutine(
-                    DialogueTextAnimation(line.text)
-                );
+
+                if (!line.voiceOverEvent.IsNull)
+                {
+                    PlayVoiceOver(line.voiceOverEvent);
+                }
+
+                StartCoroutine(DialogueTextAnimation(line.text));
             });
         
-        if (line.voice)
-            audioSource.PlayOneShot(line.voice);
 
         if (line.autoAdvanceDelay > 0)
             StartCoroutine(AutoAdvance(line.autoAdvanceDelay));
     }
+    
 
     private IEnumerator DialogueTextAnimation(string text)
     {
@@ -100,6 +102,7 @@ public class DialogueController : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
 
+        StopVoiceOver();
         doingTextAnimation = false;
         waiting = true;
 
@@ -131,8 +134,6 @@ public class DialogueController : MonoBehaviour
             });
     }
 
-
-
     public void OnDialogueContinue(InputAction.CallbackContext ctxt)
     {
         if (!ctxt.started) return;
@@ -159,6 +160,24 @@ public class DialogueController : MonoBehaviour
         waiting = false;
 
         onSequenceEnd?.Invoke();
+    }
+    
+    private void PlayVoiceOver(EventReference eventReference)
+    {
+        StopVoiceOver();
+
+        currentEvent = RuntimeManager.CreateInstance(eventReference);
+        currentEvent.start();
+    }
+    
+    private void StopVoiceOver()
+    {
+        if (!currentEvent.isValid())
+            return;
+
+        currentEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        currentEvent.release();
+        currentEvent.clearHandle();
     }
 
 }

@@ -163,7 +163,7 @@ MonoBehaviour:
   - {fileID: 3741858893669387556}
   StringsBanks:
   - {fileID: -8842452138974202625}
-  cacheTime: 639054897870142487
+  cacheTime: 639055013000579011
   cacheVersion: 131635
 --- !u!114 &1543625884937844151
 MonoBehaviour:
@@ -218,7 +218,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 250
 --- !u!114 &3593124146479633090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
   Path: FMOD/MiniJam203_FMOD/Build/Desktop/Main Bank.bank
   Name: MiniJam203_FMOD/Build/Desktop/Main Bank
   StudioPath: bank:/Main Bank
-  lastModified: 639054897870090840
+  lastModified: 639055013000579011
   FileSizes: []
   Exists: 1
 --- !u!114 &5424026224761044278

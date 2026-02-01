@@ -15,17 +15,47 @@ MonoBehaviour:
   lines:
   - text: I travel!
     autoAdvanceDelay: 0
-    voice: {fileID: 0}
+    voiceOverEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
   - text: I never very very very very very long text to test this next part so this
       is gonna be on the longer side.
     autoAdvanceDelay: 0
-    voice: {fileID: 0}
+    voiceOverEvent:
+      Guid:
+        Data1: 1381337930
+        Data2: 1211177885
+        Data3: -1800171872
+        Data4: -1409713121
+      Path: event:/Fishing/Nibble
   - text: Weeeee
     autoAdvanceDelay: 0
-    voice: {fileID: 0}
+    voiceOverEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
   - text: Need more dialogue!
     autoAdvanceDelay: 0
-    voice: {fileID: 0}
+    voiceOverEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
   - text: This is more dialogue?
     autoAdvanceDelay: 0
-    voice: {fileID: 0}
+    voiceOverEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
