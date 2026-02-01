@@ -16,6 +16,16 @@ MonoBehaviour:
   - text: I travel!
     autoAdvanceDelay: 0
     voice: {fileID: 0}
+  - text: I never very very very very very long text to test this next part so this
+      is gonna be on the longer side.
+    autoAdvanceDelay: 0
+    voice: {fileID: 0}
   - text: Weeeee
+    autoAdvanceDelay: 0
+    voice: {fileID: 0}
+  - text: Need more dialogue!
+    autoAdvanceDelay: 0
+    voice: {fileID: 0}
+  - text: This is more dialogue?
     autoAdvanceDelay: 0
     voice: {fileID: 0}
