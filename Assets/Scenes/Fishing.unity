@@ -240,7 +240,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8685132338777803966, guid: 520102a2259253b40ad15b24f5432fa3, type: 3}
+  m_Sprite: {fileID: -6695905847603491286, guid: cc814e112c30e2240bd08ba2ec7a809f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -262,8 +262,7 @@ Transform:
   m_LocalPosition: {x: -6.47, y: 4.32, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1317336090}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &716488024
@@ -278,6 +277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d3094adee986c4c82f4a4c5221c682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  moveSpeed: 5
+  spriteRenderer: {fileID: 0}
 --- !u!1 &826780129
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,14 +624,14 @@ Transform:
   m_GameObject: {fileID: 1317336089}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.797773, y: -0.31967202, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: 1.50773, y: 1.12328, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 417023262}
   - {fileID: 1139986952}
   - {fileID: 826780131}
-  m_Father: {fileID: 716488023}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1317336091
 MonoBehaviour:
@@ -653,4 +654,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1193866338}
+  - {fileID: 1317336090}
   - {fileID: 716488023}
