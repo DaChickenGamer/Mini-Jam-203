@@ -27,7 +27,7 @@ public class FishingMiniGame : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             currentLevel += movingRate * Time.deltaTime;
 
