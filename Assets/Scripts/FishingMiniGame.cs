@@ -5,6 +5,7 @@ public class FishingMiniGame : MonoBehaviour
 
     public GameObject fishingRod;
     public Sprite fishSprite;  
+    public GameObject meterBar;
 
     private GameObject maxCapacityRod;
     public static float maxCapacity = 10f;
@@ -12,6 +13,8 @@ public class FishingMiniGame : MonoBehaviour
     private float currentLevel;
     private float min, max;
     private const float movingRate = 1f;
+    private float meter = 0f;
+
     Fish fish1;
     void Start()
     {
@@ -40,14 +43,25 @@ public class FishingMiniGame : MonoBehaviour
         }
         currentLevel = Mathf.Clamp(currentLevel, 0+rodStrength/2, maxCapacity-rodStrength/2);
         CalculateRange();
+
         if (IsFishCaught(fish1.GetCurrentLevel()))
         {
-            Debug.Log("Fish Caught: " + fish1.name);
+            meter += Time.deltaTime;
         }
         else
         {
+            meter -= Time.deltaTime;
             fish1.NewSpawn();
         }
+
+        meter = Mathf.Clamp(meter, 0f, maxCapacity);
+                    meterBar.transform.localScale = new Vector3(0.1f, meter, 1f);
+
+        if (meter >= maxCapacity)
+        {
+            Debug.Log("Fish Caught!");
+        }
+
     }
 
 
@@ -77,6 +91,10 @@ public class FishingMiniGame : MonoBehaviour
 
         fishingRod.transform.position = new Vector3(0, 0, -0.1f);
         fishingRod.transform.localScale = new Vector3(1f, rodStrength, 1f);
+
+
+        meterBar.transform.position = new Vector3(maxCapacityRod.transform.position.x + 1f, maxCapacity / 2, 0);
+        meterBar.transform.localScale = new Vector3(0.1f, 0, 1f);
     }
 
 }
