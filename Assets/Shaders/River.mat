@@ -40,15 +40,15 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Specular_Density: 5
-    - _Specular_Speed: 1
+    - _Specular_Density: 1.79
+    - _Specular_Speed: 0.78
     - _Specular_Thickness: 3
-    - _Step: 0.5
+    - _Step: 0.294
     m_Colors:
-    - _Foam_Color: {r: 0.01176471, g: 1, b: 0.9686275, a: 1}
-    - _Texture_Scroll: {r: 1, g: 1, b: 0, a: 0}
-    - _Texture_Tiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Water_Color: {r: 0, g: 0.7479333, b: 1, a: 0}
+    - _Foam_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Texture_Scroll: {r: 0, g: 0.15, b: 0, a: 0}
+    - _Texture_Tiling: {r: 9.04, g: 0.55, b: 0, a: 0}
+    - _Water_Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &6686517272180159955
