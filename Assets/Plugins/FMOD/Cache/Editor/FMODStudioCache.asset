@@ -123,7 +123,7 @@ MonoBehaviour:
   Path: FMOD/MiniJam203_FMOD/Build/Desktop/Test Bank.bank
   Name: MiniJam203_FMOD/Build/Desktop/Test Bank
   StudioPath: bank:/Test Bank
-  lastModified: 639052143607877494
+  lastModified: 639054064072022232
   FileSizes: []
   Exists: 1
 --- !u!114 &-6043447814970276514
@@ -141,7 +141,7 @@ MonoBehaviour:
   Path: FMOD/MiniJam203_FMOD/Build/Desktop/Main Bank.bank
   Name: MiniJam203_FMOD/Build/Desktop/Main Bank
   StudioPath: bank:/Main Bank
-  lastModified: 639055094536888383
+  lastModified: 639055460208639458
   FileSizes: []
   Exists: 1
 --- !u!114 &-5889282700654404513
@@ -213,7 +213,7 @@ MonoBehaviour:
   Path: FMOD/MiniJam203_FMOD/Build/Desktop/Master.strings.bank
   Name: MiniJam203_FMOD/Build/Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639054583378401017
+  lastModified: 639054897870142487
   FileSizes:
   - Name: 
     Value: 1386
@@ -253,7 +253,7 @@ MonoBehaviour:
   - {fileID: 5639527586618746268}
   StringsBanks:
   - {fileID: -3241909138831786525}
-  cacheTime: 639055094536888383
+  cacheTime: 639055460208639458
   cacheVersion: 131635
 --- !u!114 &1090021265671108224
 MonoBehaviour:
@@ -378,7 +378,7 @@ MonoBehaviour:
   Path: FMOD/MiniJam203_FMOD/Build/Desktop/Master.bank
   Name: MiniJam203_FMOD/Build/Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 639054583378381025
+  lastModified: 639054064072011826
   FileSizes: []
   Exists: 1
 --- !u!114 &6730930507557515698
