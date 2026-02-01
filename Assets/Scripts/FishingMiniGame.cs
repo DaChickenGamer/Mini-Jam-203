@@ -55,7 +55,7 @@ public class FishingMiniGame : MonoBehaviour
         }
 
         meter = Mathf.Clamp(meter, 0f, maxCapacity);
-                    meterBar.transform.localScale = new Vector3(0.1f, meter, 1f);
+        meterBar.transform.localScale = new Vector3(0.1f, meter, 1f);
 
         if (meter >= maxCapacity)
         {
