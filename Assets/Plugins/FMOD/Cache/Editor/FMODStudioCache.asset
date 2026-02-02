@@ -175,7 +175,7 @@ MonoBehaviour:
   Path: FMOD/MiniJam203_FMOD/Build/Desktop/Main Bank.bank
   Name: MiniJam203_FMOD/Build/Desktop/Main Bank
   StudioPath: bank:/Main Bank
-  lastModified: 639055604559681239
+  lastModified: 639055712623054126
   FileSizes: []
   Exists: 1
 --- !u!114 &-768597808082246991
@@ -262,12 +262,13 @@ MonoBehaviour:
   - {fileID: -414156113589717636}
   - {fileID: 6890441165378720632}
   - {fileID: -768597808082246991}
+  - {fileID: 1041552705157741141}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4766323499670955360}
   StringsBanks:
   - {fileID: 1989134048523185525}
-  cacheTime: 639055604559686232
+  cacheTime: 639055712623164124
   cacheVersion: 131635
 --- !u!114 &962063780961265129
 MonoBehaviour:
@@ -296,6 +297,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1218
+--- !u!114 &1041552705157741141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Music/Music
+  Guid:
+    Data1: -1294216983
+    Data2: 1195705072
+    Data3: 398823331
+    Data4: -331971939
+  Banks:
+  - {fileID: -2372586234016198028}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 126000
 --- !u!114 &1989134048523185525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,10 +339,10 @@ MonoBehaviour:
   Path: FMOD/MiniJam203_FMOD/Build/Desktop/Master.strings.bank
   Name: MiniJam203_FMOD/Build/Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639055604559686232
+  lastModified: 639055712623164124
   FileSizes:
   - Name: 
-    Value: 1452
+    Value: 1494
   Exists: 1
 --- !u!114 &2367910085554976371
 MonoBehaviour:
@@ -376,7 +404,7 @@ MonoBehaviour:
   Path: FMOD/MiniJam203_FMOD/Build/Desktop/Master.bank
   Name: MiniJam203_FMOD/Build/Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 639055602003300781
+  lastModified: 639055712623154131
   FileSizes: []
   Exists: 1
 --- !u!114 &6043115119574659333
