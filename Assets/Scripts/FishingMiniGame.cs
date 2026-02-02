@@ -6,15 +6,19 @@ public class FishingMiniGame : MonoBehaviour
     public GameObject fishingRod;
     public Sprite fishSprite;  
     public GameObject meterBar;
+    public Animator animator;
 
-    private GameObject maxCapacityRod;
-    public static float maxCapacity = 10f;
+    public GameObject maxCapacityRod;
+    private  float maxCapacity = 8f;
+ 
     public float rodStrength;
     private float currentLevel;
     private float min, max;
-    private const float movingRate = 1f;
+    private  const float movingRate = 4f;
     private float meter = 0f;
+    private const int middleScreen  = 5;
 
+    
     Fish fish1;
     void Start()
     {
@@ -22,7 +26,7 @@ public class FishingMiniGame : MonoBehaviour
         currentLevel = maxCapacity / 2;
         CalculateRange();
         CreateBars();
-        fish1 = new Fish(1, "cod", fishSprite);
+        fish1 = new Fish(3, "cod", fishSprite);
         Debug.Log("FishingRod: " + fishingRod);
     }
 
@@ -41,7 +45,7 @@ public class FishingMiniGame : MonoBehaviour
             currentLevel -= movingRate * Time.deltaTime;
 
         }
-        currentLevel = Mathf.Clamp(currentLevel, 0+rodStrength/2, maxCapacity-rodStrength/2);
+        currentLevel = Mathf.Clamp(currentLevel, middleScreen/2 - rodStrength/2, middleScreen*1.5f + rodStrength);
         CalculateRange();
 
         if (IsFishCaught(fish1.GetCurrentLevel()))
@@ -54,12 +58,14 @@ public class FishingMiniGame : MonoBehaviour
             fish1.NewSpawn();
         }
 
-        meter = Mathf.Clamp(meter, 0f, maxCapacity);
+        meter = Mathf.Clamp(meter,0, maxCapacity);
         meterBar.transform.localScale = new Vector3(0.1f, meter, 1f);
 
         if (meter >= maxCapacity)
         {
             Debug.Log("Fish Caught!");
+            animator.SetBool("isFishing", false);
+            animator.SetTrigger("fishCaught");
         }
 
     }
@@ -82,19 +88,18 @@ public class FishingMiniGame : MonoBehaviour
 
     void CreateBars()
     {
-
-        maxCapacityRod = GameObject.CreatePrimitive(PrimitiveType.Quad);
-        maxCapacityRod.transform.position = new Vector3(0, maxCapacity / 2, 0);
-        maxCapacityRod.transform.localScale = new Vector3(1f, maxCapacity, 1f);
-
+ maxCapacityRod.transform.localScale = new Vector3(1f, maxCapacity, 1f);
+        maxCapacityRod.transform.localPosition = new Vector3(0, middleScreen, 0);
+       
 
 
-        fishingRod.transform.position = new Vector3(0, 0, -0.1f);
-        fishingRod.transform.localScale = new Vector3(1f, rodStrength, 1f);
+fishingRod.transform.localScale = new Vector3(1f, rodStrength, 1f);
+        fishingRod.transform.localPosition = new Vector3(0, middleScreen, -0.1f);
+        
 
 
-        meterBar.transform.position = new Vector3(maxCapacityRod.transform.position.x + 1f, maxCapacity / 2, 0);
-        meterBar.transform.localScale = new Vector3(0.1f, 0, 1f);
+        meterBar.transform.localPosition = new Vector3(maxCapacityRod.transform.localPosition.x + 1f, middleScreen, 0);
+        meterBar.transform.localScale = new Vector3(0.1f, maxCapacity, 1f);
     }
 
 }

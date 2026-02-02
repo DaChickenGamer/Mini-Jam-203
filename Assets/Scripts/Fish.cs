@@ -5,23 +5,24 @@ public class Fish
     private int fishToughness;
         private float[] toughnessArray = { 0.1f, 0.5f, 10f, 20f };
 
-    public string name;
+    public string fishName;
     private GameObject fishObject;
     private float currentLevel;
 
     public Fish(int toughness, string fishName, Sprite fishSprite)
     {
-        fishObject = new GameObject("Fish_" + name);
+        fishObject = new GameObject("Fish_" + fishName);
+        fishObject.transform.localScale = new Vector3(2.5f, 2.5f, 1f);
         var sr = fishObject.AddComponent<SpriteRenderer>();
         sr.sprite = fishSprite;
         sr.sortingOrder = 10;
-        Spawn(FishingMiniGame.maxCapacity);
+        Spawn();
     }
         
-    public void Spawn(float maxCapacity)
+    public void Spawn()
     {
-        float level = Random.Range(0f, maxCapacity);
-        Debug.Log("Fish " + name + " spawned at level: " + level);
+        float level = Random.Range(1.5f, 8.5f);
+        Debug.Log("Fish " + fishName + " spawned at level: " + level);
         currentLevel = level;
         fishObject.transform.position = new Vector3(0, currentLevel, 0);
     }
@@ -30,8 +31,8 @@ public class Fish
     {
         if( Random.Range(0f, 1f) < toughnessArray[fishToughness] / 100f )
         {
-            Spawn(FishingMiniGame.maxCapacity);
-            Debug.Log("Fish " + name + " respawned at level: " + currentLevel);
+            Spawn();
+            Debug.Log("Fish " + fishName + " respawned at level: " + currentLevel);
         }
        
     }
